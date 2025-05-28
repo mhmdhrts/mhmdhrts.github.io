@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+@keyframes paddingReveal {
+    from { padding: 0 30rem; }
+    to { padding: 0; }
+}
+
+@media (max-width: 767px) {
+    body { animation: none; margin: 0.3rem; }
+
+    .body {
+    gap: 0.3rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+    grid-auto-rows: 2em;
+    }
+}
+@media (min-width: 768px) {
+    body { animation: paddingReveal 2s ease; margin: 0.4rem; }
+
+    .body {
+    gap: 0.4rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    grid-auto-rows: 3em;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.1;
+  color: inherit;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.1rem !important;
+}
+
+body {
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    /* font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal; */
+    color: beige;
+    background-color: #0e0e0e;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0e0e0e 40px ), repeating-linear-gradient( #19191955, #191919 );
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column;
+} ::-webkit-scrollbar { display: none; }
+
+.body {
+    display: grid;
+}
+
+.rect {
+    background-color: rgb(39, 38, 64);
+    border: 0.5px solid rgba(245, 245, 220, 0.11);
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    transition: transform 0.1s ease;
+}
+.rect:hover {
+    background-color: rgba(47, 45, 80, 0.779);
+    backdrop-filter: blur(1px);
+    transform: scale(1.2, 1.2);
+}
+
+#s1x2 { grid-area: span 1 / span 2; }
+#s2x1 { grid-area: span 2 / span 1; }
+#s2x2 { grid-area: span 2 / span 2; }
+#s2x3 { grid-area: span 2 / span 3; }
+
+
+#name {
+    grid-area: span 5 / span 7;
+    font-size: clamp(3rem, 7vw, 5rem);
+    letter-spacing: -0.2rem;
+}
+#name p {
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: -0.1rem;
+}
+
+#gd {
+    grid-area: span 3 / span 3;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+#cs {
+    grid-area: span 4 / span 3;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+} #cs:hover {
+
+}
+#fg {
+    grid-area: span 3 / span 4;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+#ttl {
+    grid-area: span 2 / span 3;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
