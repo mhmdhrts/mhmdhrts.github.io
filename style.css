@@ -101,13 +101,24 @@ body {
 .s4x3 { grid-area: span 4 / span 3; }
 .s3x1 { grid-area: span 3 / span 1; }
 .s3x3 { grid-area: span 3 / span 3; }
+.s5x4 { grid-area: span 5 / span 4; }
 
 #name {
     grid-area: span 5 / span 7;
     font-size: clamp(3rem, 7vw, 4rem);
     letter-spacing: -0.2rem;
+} #name p {
+    font-size: clamp(1.5rem, 3vw, 2.5em);
+    letter-spacing: -0.1rem;
 }
 
+#threeD {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+} #threeD:hover {
+    background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTN4MDU4dzhvaG1xNGZucTR5ZzhsM29tNjFrenp3M3pnbzY4dDRsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mVp6sSZsgunzuKqIXM/giphy.gif);
+    background-size: contain;
+    background-blend-mode: multiply;
+}
 #gd {
     grid-area: span 3 / span 3;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
